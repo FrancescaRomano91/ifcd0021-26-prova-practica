@@ -10,6 +10,10 @@ export default function EnrollmentsList(){
     
     }
 
+    const hideEnrollments = () => {
+    setEnrollment([]);
+  };
+
 
     return(
       <>
@@ -20,6 +24,10 @@ export default function EnrollmentsList(){
         Show 
         </button>
 
+        <button onClick = {hideEnrollments}>
+        Hide
+        </button>
+
         {enrollment.map((enroll1) => (
         <div key={enroll1.id}>
         <p>Id: {enroll1.id}</p>
@@ -28,9 +36,12 @@ export default function EnrollmentsList(){
         <p>Subject: {enroll1.subject}</p>
         <p>Date:{enroll1.date}</p>
         <hr />
+
+        
         
         </div>
         ))}
+        
         </div>
 
       </>
