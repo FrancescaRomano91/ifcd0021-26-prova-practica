@@ -6,7 +6,7 @@ export default function EnrollmentsList(){
     const [enrollment, setEnrollment] = useState([]);
 
     const showEnrollments = () => {
-      setEnrollment(enrollment);
+      setEnrollment(enrollments);
     
     }
 
@@ -21,8 +21,14 @@ export default function EnrollmentsList(){
         </button>
 
         {enrollment.map((enroll1) => (
-        <div key={enrollment.id}>
-        <p>Id: {enrollment.id}</p>
+        <div key={enroll1.id}>
+        <p>Id: {enroll1.id}</p>
+        <p>Teacher: {enroll1.teacher}</p>
+        <p>Student: {enroll1.student}</p>
+        <p>Subject: {enroll1.subject}</p>
+        <p>Date:{enroll1.date}</p>
+        <hr />
+        
         </div>
         ))}
         </div>

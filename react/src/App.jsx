@@ -12,7 +12,7 @@ function App() {
   return (
     <main>
       <h1>Matrícules</h1>
-      <EnrollmentList />
+      <EnrollmentsList />
     </main>
   )
 }
