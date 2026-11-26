@@ -1,4 +1,7 @@
 import { enrollments } from './data.js'
+import EnrollmentsList from './enrollment.jsx'
+
+
 
 // TODO (MF05): mostreu l'array `enrollments` importat de data.js.
 // Feu servir useState i un esdeveniment (per exemple, filtrar per professor
@@ -9,7 +12,7 @@ function App() {
   return (
     <main>
       <h1>Matrícules</h1>
-      <p>TODO: renderitzeu les matrícules de <code>src/data.js</code>.</p>
+      <EnrollmentList />
     </main>
   )
 }

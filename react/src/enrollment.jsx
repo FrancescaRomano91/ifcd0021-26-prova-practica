@@ -1,31 +1,32 @@
 import { enrollments } from "./data";
 import { useState } from "react";
 
-export default function EnrollmentList(){
+export default function EnrollmentsList(){
 
-    [enrollments, setEnrollment] = useState([]);
+    const [enrollment, setEnrollment] = useState([]);
 
-    const showEnrollments(){
-      setEnrollment{enrollments};
+    const showEnrollments = () => {
+      setEnrollment(enrollment);
     
     }
 
 
-    return (
-        
-        <>
-          <h2> Enrollments </h2>
+    return(
+      <>
+        <h2> Enrollments </h2>
 
-          <div>
-            <button onClick = {showEnrollments}>
-            Show 
-            </button>
+        <div>
+        <button onClick = {showEnrollments}>
+        Show 
+        </button>
 
-            {enrollmentList.map((enrollment) => (
-                <div key={enrollment.id}>
-                  <p>Id: {enrollment.id}</p>
-                </div>
-            ))}
-        </>
-    );
+        {enrollment.map((enroll1) => (
+        <div key={enrollment.id}>
+        <p>Id: {enrollment.id}</p>
+        </div>
+        ))}
+        </div>
+
+      </>
+  );
 }
