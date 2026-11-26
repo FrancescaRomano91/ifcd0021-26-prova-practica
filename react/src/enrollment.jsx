@@ -12,20 +12,20 @@ export default function EnrollmentList(){
 
 
     return (
+        
+        <>
+          <h2> Enrollments </h2>
 
-        <h2> Enrollments </h2>
-
-        <div>
+          <div>
             <button onClick = {showEnrollments}>
             Show 
             </button>
 
-            {enrollmentList.map((enrollments) => (
+            {enrollmentList.map((enrollment) => (
                 <div key={enrollment.id}>
-                    <p>Id: {enrollment.id}</p>
+                  <p>Id: {enrollment.id}</p>
                 </div>
-            )}
+            ))}
+        </>
     );
 }
-
-
