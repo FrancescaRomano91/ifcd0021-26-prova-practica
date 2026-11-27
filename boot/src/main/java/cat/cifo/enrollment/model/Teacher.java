@@ -1,4 +1,5 @@
 package cat.cifo.enrollment.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,14 @@ public class Teacher {
     private String id;
     private String name;
 
+    public Teacher(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-
+    @JsonIgnore
     private List<Enrollment> enrollment = new ArrayList<>();
 
 

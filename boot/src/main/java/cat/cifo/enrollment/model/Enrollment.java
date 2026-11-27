@@ -22,12 +22,10 @@ public class Enrollment {
 
     @ManyToOne
     @JoinColumn(name = "student_FK")
-    @JsonIgnore
     private Student student;
 
     @ManyToOne
     @JoinColumn(name = "teacher_FK")
-    @JsonIgnore
     private Teacher teacher;
 
 
